@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "binsentry"
+version = "0.1.0"
+description = "Performs dependency version checking"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[project.scripts]
+binsentry = "binsentry:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["binsentry"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["scan*"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}

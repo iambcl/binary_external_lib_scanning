@@ -1,0 +1,10 @@
+.venv/
+.git/
+.agents/
+.codex/
+.aws/
+.env
+.env.*
+**/__pycache__/
+**/*.py[cod]
+.DS_Store
